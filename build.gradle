@@ -2,39 +2,18 @@ plugins {
     id 'java'
 }
 
-apply plugin: 'java-library'
-apply plugin: 'maven'
-apply plugin: 'maven-publish'
-
 group 'ru.chigurov'
 version '1.0-SNAPSHOT'
 
 repositories {
     mavenLocal()
     mavenCentral()
-    jcenter()
-
-    maven { url 'https://repo.spring.io/libs-release' }
 }
 
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.0.3'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.0.3'
     compile ("ru.chigurov:utils:1.3.5")
-
-   //    implementation files('libs/utils-1.3.5.jar')
-//    compile name: 'utils-1.3.5'
-//    compile ("ru.chigurov:utils-1.3.5.jar")
-//    classpath 'ru.chigurov:utils-1.3.5.jar'
-
-
-}
-
-jar {
-    manifest {
-        attributes(
-                "Class-Path": configurations.compile.collect { it.getName() }.join(' '))
-    }
 }
 
 test {
