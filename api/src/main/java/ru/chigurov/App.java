@@ -6,9 +6,14 @@ public class App {
         Utils utils = new Utils();
         System.out.println(utils.isAllPositiveNumbers("12","79"));
 
-        ArrayListCustom<String> arrayListCustom = new ArrayListCustom<String>();
+        /*ArrayListCustom<String> arrayListCustom = new ArrayListCustom<String>();
         arrayListCustom.add("Custom collection is working");
-        System.out.println(arrayListCustom);
+        System.out.println(arrayListCustom);*/
+
+        LinkedListCustom<String> linkedListCustom = new LinkedListCustom<>();
+        linkedListCustom.add("Custom collection is working");
+        System.out.println(linkedListCustom);
+
     }
 
 }
